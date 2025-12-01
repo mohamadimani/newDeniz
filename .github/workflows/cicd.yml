@@ -16,6 +16,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: 'ftp.denizedu.ir'
+        server: '89.32.249.147'
         username: 'newDeniz@denizedu.ir'
         password: 'm09191930406'
