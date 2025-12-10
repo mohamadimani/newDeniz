@@ -19,10 +19,16 @@ class ModelRoleSeeder extends Seeder
             return;
         }
         $adminRole = Role::where('name', 'admin')->first();
+
         $adminUser = User::where('mobile', '09121234567')->first();
         $adminUser->assignRole($adminRole);
         $adminUser->givePermissionTo($adminRole->permissions);
+
         $adminUser2 = User::where('mobile', '09191930406')->first();
+        $adminUser2->assignRole($adminRole);
+        $adminUser2->givePermissionTo($adminRole->permissions);
+
+        $adminUser2 = User::where('mobile', '09121963157')->first();
         $adminUser2->assignRole($adminRole);
         $adminUser2->givePermissionTo($adminRole->permissions);
     }
